@@ -1,0 +1,57 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #191c29;
+}
+
+.card {
+  width: 300px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  transition: 0.5s;
+  margin: 0 50px;
+  perspective: 900px;
+}
+
+.cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.title {
+  width: 80%;
+  transition: 0.5s;
+}
+
+.character {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  opacity: 0;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.card:hover .cover {
+  transform: translateY(-5%) rotateX(25deg);
+  box-shadow: 2px 35px 32px rgba(0, 0, 0, 0.75);
+}
+
+.card:hover .character {
+  opacity: 1;
+  transform: translateX(0) translateY(-30%);
+}
+
+.card:hover .title {
+  transform: translateX(0) translateY(-50px);
+}
